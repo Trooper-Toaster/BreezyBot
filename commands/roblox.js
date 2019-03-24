@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 const rbx = require("roblox-js");
 let id = "id";
-let groupname = "name"
+
 exports.run = (bot, message, args) => {
             
 let person = args[0];
-getid()
+
 
 
 function getid(){
@@ -17,7 +17,7 @@ rbx.getIdFromUsername(person).then(foundId => {
                                
 });
 };
-            
+   getid()         
 
             
 let robloxembed = new Discord.RichEmbed()
