@@ -15,7 +15,7 @@ exports.run = (bot, message, args) => {
      
      if(res.length === 0) {
        embed.setColor("RED");
-       embed.addFiled("No Data found")
+       embed.addField("No Data found")
      } else if (res.length < 10) {
                 
       embed.setColor("GREEN");
