@@ -9,11 +9,16 @@ let robloxembed = new Discord.RichEmbed()
 rbx.getIdFromUsername(person).then(foundId => {
             const Id = foundId
             robloxembed.addField("Player ID:", Id),
+                        rbx.getRankNameInGroup(4666488, Id).then(groupName => {
+                        const namef = groupName
+                        robloxembed.addField("Rank in the Breezy Group:", namef),
                         
+});
             
+            rbx.getRankNameInGroup(4666488, Id)
             message.channel.send(robloxembed);
             
-});
+
 
 }
 
