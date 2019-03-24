@@ -8,7 +8,9 @@ let person = args[0]
 
 function getid(){
 rbx.getIdFromUsername(person).then(foundId => {
-            id = foundId
+            const ok = foundId
+            
+            id = ok
             
                                
 });
