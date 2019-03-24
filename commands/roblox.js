@@ -5,10 +5,9 @@ const rbx = require("roblox-js");
 exports.run = (bot, message, args) => {
 let person = args[0]
 
-rbx.getIdFromUsername(person).then(foundId => {
-            const Id = foundId
+const what = rbx.getIdFromUsername(person)
             
-            message.channel.send(Id)
+            message.channel.send(what)
 
 });
 }
