@@ -8,7 +8,7 @@ let robloxembed = new Discord.RichEmbed()
 .setTitle("Roblox Player Info")
 rbx.getIdFromUsername(person).then(foundId => {
             const Id = foundId
-            robloxembed.addField("Player ID:", Id),
+            robloxembed.addField("Player ID:", Id)
 
 });
                         rbx.getRankNameInGroup(4666488, Id).then(groupName => {
