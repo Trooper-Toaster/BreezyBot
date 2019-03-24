@@ -3,7 +3,7 @@ const rbx = require("roblox-js");
 
 
 exports.run = (bot, message, args) => {
-message.channel.send(args[1])
+message.channel.send(args[0])
 
 }
 
