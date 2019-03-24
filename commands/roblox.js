@@ -5,8 +5,7 @@ let groupname = "name"
 exports.run = (bot, message, args) => {
             
 let person = args[0];
-getid()
-getgrouprank()
+
 
 function getid(){
 rbx.getIdFromUsername(person).then(foundId => {
@@ -25,7 +24,8 @@ rbx.getIdFromUsername(person).then(foundId => {
                        });
             }
             
-            
+getid()
+getgrouprank()            
 
             
 let robloxembed = new Discord.RichEmbed()
