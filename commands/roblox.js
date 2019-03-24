@@ -4,15 +4,15 @@ let id = ""
 
 exports.run = (bot, message, args) => {
 let person = args[0]
-let robloxembed = new Discord.RichEmbed()
-.setTitle("Roblox Player Info")
+
 rbx.getIdFromUsername(person).then(foundId => {
             id = foundId
-            robloxembed.addField("Player ID:", id)
+            
                                
 });
-
-                              
+let robloxembed = new Discord.RichEmbed()
+.setTitle("Roblox Player Info")
+.addField("Player ID:", id);                              
 
             message.channel.send(robloxembed);
             
