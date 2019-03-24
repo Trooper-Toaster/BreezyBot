@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 const rbx = require("roblox-js");
-let id = ".";
-let groupname = "."
+let id = "id";
+let groupname = "name"
 exports.run = (bot, message, args) => {
             
 let person = args[0];
-getid();
+getid()
 getgrouprank()
 
 function getid(){
@@ -18,8 +18,8 @@ rbx.getIdFromUsername(person).then(foundId => {
 });
 };
  function getgrouprank(){
-                       rbx.getRankNameInGroup(4666488, id).then(grouprank => {
-            const fp = grouprank
+                       rbx.getRankNameInGroup(4666488, id).then(name => {
+            const fp = name
             
             groupname = fp
                        });
