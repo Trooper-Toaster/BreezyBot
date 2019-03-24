@@ -196,7 +196,7 @@ message.guild.channels.find(`name`, "modlog").send(deleteEmbed);
 
   
   
-});
+
 bot.login(process.env.BOT_TOKEN);
 
 const http = require('http');
