@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const rbx = require("roblox-js");
-let id = "."
+let id = ".";
 let groupname = "."
 exports.run = (bot, message, args) => {
 let person = args[0]
@@ -25,7 +25,7 @@ rbx.getIdFromUsername(person).then(foundId => {
             }
             
             
-getid() 
+getid();
 getgrouprank()
             
 let robloxembed = new Discord.RichEmbed()
