@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const rbx = require("roblox-js");
-let id = ""
+let id = "."
 
 exports.run = (bot, message, args) => {
 let person = args[0]
