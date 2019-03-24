@@ -9,7 +9,6 @@ const what = rbx.getIdFromUsername(person)
             
             message.channel.send(what)
 
-});
 }
 
 module.exports.help = {
