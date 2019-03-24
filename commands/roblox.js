@@ -11,11 +11,11 @@ rbx.getIdFromUsername(person).then(foundId => {
             robloxembed.addField("Player ID:", Id),
                         rbx.getRankNameInGroup(4666488, Id).then(groupName => {
                         const namef = groupName
-                        robloxembed.addField("Rank in the Breezy Group:", namef),
+                        robloxembed.addField("Rank in the Breezy Group:", namef)
             });                       
 });
             
-            rbx.getRankNameInGroup(4666488, Id)
+        
             message.channel.send(robloxembed);
             
 
