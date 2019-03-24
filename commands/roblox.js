@@ -10,6 +10,6 @@ message.channel.send(args[0])
 
 module.exports.help = {
   
-  name: "rblxlookup"
+  name: "rblxsearch"
   
 }
