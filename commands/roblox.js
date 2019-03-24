@@ -20,7 +20,7 @@ rbx.getIdFromUsername(person).then(foundId => {
                        rbx.getRankNameInGroup(4666488, id).then(grouprank => {
             const fp = grouprank
             
-            groupname = ok
+            groupname = fp
                        });
             }
             
