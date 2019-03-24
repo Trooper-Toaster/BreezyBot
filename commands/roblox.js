@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const rbx = require("roblox-js");
 let id = "."
-
+let groupname = "."
 exports.run = (bot, message, args) => {
 let person = args[0]
 
@@ -16,11 +16,22 @@ rbx.getIdFromUsername(person).then(foundId => {
 });
 }
             
-getid()            
+            function getgrouprank(){
+                       rbx.getRankNameInGroup(4666488, id).then(grouprank => {
+            const fp = grouprank
+            
+            groupname = ok
+                       });
+            }
+            
+            
+getid() 
+getgrouprank()
             
 let robloxembed = new Discord.RichEmbed()
 .setTitle("Roblox Player Info")
-.addField("Player ID:", id);                              
+.addField("Player ID:", id)   
+.addField("Rank In Group:", groupname);  
 
             message.channel.send(robloxembed);
             
