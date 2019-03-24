@@ -3,7 +3,12 @@ const rbx = require("roblox-js");
 
 
 exports.run = (bot, message, args) => {
-message.channel.send(args[0])
+let person = args[0]
+
+rbx.getIdFromUsername(person).then(foundId => {
+            const Id = foundId
+            
+            message.channel.send(Id)
 
 }
 
