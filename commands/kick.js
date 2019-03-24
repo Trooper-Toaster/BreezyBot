@@ -1,6 +1,6 @@
  const Discord = require("discord.js");
 const fs = require("fs");
-let warns = JSON.parse(fs.readFileSync("./kicks.json", "utf8"));
+let kicks = JSON.parse(fs.readFileSync("./kicks.json", "utf8"));
 
 module.exports.run = async (bot, message, args) => {
 let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -8,16 +8,16 @@ if(!kUser) return message.channel.send("Cant Find user");
 let kreason = args.join(" ").slice(22);
 if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Nope")
 if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("Cant Kick other Mods")
-if(!warns[kUser.id]) warns[kUser.id] = {
+if(!kicks[kUser.id]) kicks[kUser.id] = {
     warns: 0
   };
 
   warns[kUser.id].warns++;
-   fs.writeFile("./kicks.json", JSON.stringify(warns), (err) => {
+   fs.writeFile("./kicks.json", JSON.stringify(kicks), (err) => {
     if (err) console.log(err)
   });
 let kickEmbed = new Discord.RichEmbed()
-.setDescription(`👢**Kicked** User: ${kUser} \n 📄**Reason**: ${kreason} \n 📋**Kicks**: ${warns[kUser.id].kicks}`)
+.setDescription(`👢**Kicked** User: ${kUser} \n 📄**Reason**: ${kreason} \n 📋**Kicks**: ${kicks[kUser.id].kicks}`)
   .setAuthor(message.author.username)
   .setColor("#fc6400")
   .setThumbnail(kUser.Avatar)
@@ -32,11 +32,11 @@ kickChannel.send(kickEmbed);
   console.log(`${kUser} was kicked by ${message.author}`)
 kUser.sendMessage(`You have been kicked for ${kreason}`);
 
-    if(warns[kUser.id].warns == 3){
+    if(kicks[kUser.id].kicks == 3){
     message.guild.member(kUser).ban(kreason);
     message.reply(`<@${kUser.id}> has been banned.`);
-    warns[kUser.id] = {
-    warns: 0
+    kicks[kUser.id] = {
+    kicks: 0
   };
   }
 
