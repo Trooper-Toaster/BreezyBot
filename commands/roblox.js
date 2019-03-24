@@ -11,7 +11,7 @@ rbx.getIdFromUsername(person).then(foundId => {
             message.channel.send(Id)
 
 });
-
+}
 
 module.exports.help = {
   
