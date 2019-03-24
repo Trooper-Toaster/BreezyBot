@@ -3,10 +3,10 @@ const rbx = require("roblox-js");
 let id = ".";
 let groupname = "."
 exports.run = (bot, message, args) => {
-            let id = ".";
-let groupname = ".";
-let person = args[0]
-
+            
+let person = args[0];
+getid();
+getgrouprank()
 
 function getid(){
 rbx.getIdFromUsername(person).then(foundId => {
@@ -26,8 +26,7 @@ rbx.getIdFromUsername(person).then(foundId => {
             }
             
             
-getid();
-getgrouprank()
+
             
 let robloxembed = new Discord.RichEmbed()
 .setTitle("Roblox Player Info")
