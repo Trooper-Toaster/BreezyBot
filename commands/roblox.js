@@ -10,7 +10,7 @@ const id = rbx.getIdFromUsername(person)
             robloxembed.addField("Player ID:", id)
                                
 
-};
+
                               
 
             message.channel.send(robloxembed);
