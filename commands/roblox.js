@@ -6,13 +6,9 @@ exports.run = (bot, message, args) => {
 let person = args[0]
 let robloxembed = new Discord.RichEmbed()
 .setTitle("Roblox Player Info")
-rbx.getIdFromUsername(person).then(foundId => {
-            const Id = foundId
-            robloxembed.addField("Player ID:", Id)
-             rbx.getRankNameInGroup(4666488, Id).then(groupName => {
-             const namef = groupName
-             robloxembed.addField("Rank in the Breezy Group:", namef)
-            });                            
+const id = rbx.getIdFromUsername(person)
+            robloxembed.addField("Player ID:", id)
+                               
 
 });
                               
