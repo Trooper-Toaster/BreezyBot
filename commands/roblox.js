@@ -8,9 +8,10 @@ let robloxembed = new Discord.RichEmbed()
 .setTitle("Roblox Player Info")
 rbx.getIdFromUsername(person).then(foundId => {
             const Id = foundId
-            robloxembed.addField("Player ID:", Id)
+            robloxembed.addField("Player ID:", Id),
+                        
             
-            message.channel.send(Id);
+            message.channel.send(robloxembed);
             
 });
 
