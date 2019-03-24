@@ -3,6 +3,8 @@ const rbx = require("roblox-js");
 let id = ".";
 let groupname = "."
 exports.run = (bot, message, args) => {
+            let id = ".";
+let groupname = ".";
 let person = args[0]
 
 
