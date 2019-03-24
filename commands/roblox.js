@@ -6,7 +6,8 @@ exports.run = (bot, message, args) => {
 let person = args[0]
 let robloxembed = new Discord.RichEmbed()
 .setTitle("Roblox Player Info")
-const id = rbx.getIdFromUsername(person)
+const id = rbx.getIdFromUsername(person).then(foundId => {
+            const id = foundId});
             robloxembed.addField("Player ID:", id)
                                
 
