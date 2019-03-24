@@ -202,7 +202,7 @@ bot.on('messageUpdate', (oldMessage, newMessage) => {
 .setColor("#f442e8")
    .setThumbnail(newMessage.author.displayAvatarURL)
   .setAuthor("Breezy Bot")
-.addField("Original", oldMessage.content)
+  .addField("Original", oldMessage.content)
   .addField("Current", newMessage.content)
   .addField("In Channel", newMessage.channel.name);
   
