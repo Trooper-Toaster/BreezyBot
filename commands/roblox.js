@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
-const roblox = require("roblox.js");
+const roblox = require("roblox-js");
 
 exports.run = (bot, message, args) => {
   
   let person = args[0]
   
-  rbx.getIdFromUsername(person).then(foundId => {
+  roblox.getIdFromUsername(person).then(foundId => {
             const Id = foundId
             message.channel.send(Id)
             });
