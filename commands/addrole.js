@@ -19,6 +19,8 @@ let froleimbed = new Discord.RichEmbed()
   .addField("Time", message.createdAt)
   .addField("Roled", rMember)
   .addField("Role", gRole)
+  .setTimestamp()
+  .setFooter("Breezy Moderation Bot!", bot.user.displayAvatarURL)
   .addField("By", message.author);
 
   let frole = message.guild.channels.find(`name`, "modlog");
