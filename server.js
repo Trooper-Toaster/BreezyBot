@@ -184,11 +184,12 @@ bot.on('messageDelete', message => {
   
   let deleteEmbed = new Discord.RichEmbed()
 .setDescription("Message Deleted")
-.setColor("#000000")
+.setColor("#f4c542")
   .setThumbnail(message.author.displayAvatarURL)
   .setAuthor("Breezy Bot")
 .addField("Message Content", message.content)
   .addField("Message Deleted By", message.author.username)
+  .setTimestamp()
   .addField("In Channel", message.channel.name);
   
 message.guild.channels.find(`name`, "modlog").send(deleteEmbed);
