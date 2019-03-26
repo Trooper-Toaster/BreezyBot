@@ -30,7 +30,9 @@ if(wUser.hasPermission("KICK_MEMBERS")) return message.channel.send("Cant warn o
   .setAuthor(message.author.username)
   .setColor("#fc6400")
   .setThumbnail(wUser.displayAvatarURL)
- .setFooter("Breezy Bot", bot.user.displayAvatarURL)
+    .setTimestamp()
+  .setFooter("Breezy Moderation Bot!", bot.user.displayAvatarURL);
+ 
   
    
 
