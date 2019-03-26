@@ -176,7 +176,7 @@ bot.on('guildMemberRemove', member => {
   
   Money.findOneAndDelete({
     userID: member.id,
-    serverID: message.guild.id
+    serverID: bot.guild.id
   }, (err, res) => {
     if(err) console.log(err)
     console.log("Coins deleted!")
