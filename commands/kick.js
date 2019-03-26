@@ -9,10 +9,10 @@ let kreason = args.join(" ").slice(22);
 if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Nope")
 if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("Cant Kick other Mods")
 if(!kicks[kUser.id]) kicks[kUser.id] = {
-    warns: 0
+    kicks: 0
   };
 
-  warns[kUser.id].warns++;
+  kicks[kUser.id].kicks++;
    fs.writeFile("./kicks.json", JSON.stringify(kicks), (err) => {
     if (err) console.log(err)
   });
