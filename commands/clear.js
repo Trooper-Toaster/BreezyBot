@@ -12,8 +12,8 @@ message.channel.bulkDelete(args[0]).then(() => {
   
   .addField("Cleared by", message.author)
   .addField("Cleared", args[0])
-
-  .addField("Time", message.createdAt);
+  .setTimestamp()
+  .setFooter("Breezy Moderation Bot!", bot.user.displayAvatarURL);
 
 
 
