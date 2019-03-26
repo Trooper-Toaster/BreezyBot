@@ -20,6 +20,8 @@ let roleimbed = new Discord.RichEmbed()
   .addField("Time", message.createdAt)
   .addField("Who", qMember)
   .addField("Removed", tRole)
+  .setTimestamp()
+  .setFooter("Breezy Moderation Bot!", bot.user.displayAvatarURL)
   .addField("By", message.author);
 
   let frole = message.guild.channels.find(`name`, "modlog");
