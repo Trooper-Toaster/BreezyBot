@@ -168,11 +168,19 @@ bot.on('guildMemberAdd', member => {
 
 
 bot.on('guildMemberRemove', member => {
-  member.sendMessage("Thanks for leaving the Breezy Discord!");
+  member.sendMessage("Thanks for leaving the Breezy Discord!, also btw all of your coins are gone now!");
   bot.channels.get(serverStats.totalUsersID).setName(`Total Users : ${member.guild.memberCount}`);
   bot.channels.get(serverStats.memberCountID).setName(`Total Members: ${member.guild.members.filter(m => !m.user.bot).size}`);
   bot.channels.get(serverStats.botCountID).setName(`Bot Count : ${member.guild.members.filter(m => m.user.bot).size}`);
-     let channelsss= member.guild.channels.find(`name`, "general")
+     let channelsss= member.guild.channels.find(`name`, "general");
+  
+  Money.findOneAndDelete({
+    userID: member.id,
+    serverID: message.guild.id
+  }, (err, res) => {
+    if(err) console.log(err)
+    console.log("Coins deleted!")
+  })
    
    channelsss.send(`${member} has left the server`);
   
