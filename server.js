@@ -180,7 +180,7 @@ bot.on('guildMemberRemove', member => {
   }, (err, res) => {
     if(err) console.log(err)
     console.log("Coins deleted!")
-  })
+  });
    
    channelsss.send(`${member} has left the server`);
   
