@@ -155,7 +155,7 @@ bot.on('guildMemberAdd', member => {
   bot.channels.get(serverStats.memberCountID).setName(`Total Members: ${member.guild.members.filter(m => !m.user.bot).size}`);
   bot.channels.get(serverStats.botCountID).setName(`Bot Count : ${member.guild.members.filter(m => m.user.bot).size}`);
    let channelss= member.guild.channels.find(`name`, "welcome");
-  let channelssf= member.guild.channels.find(`name`, "general");
+  let channelssf= member.guild.channels.find(`name`, "join-leave-log");
    
   
    channelss.send(`${member} has joined`);
@@ -172,7 +172,7 @@ bot.on('guildMemberRemove', member => {
   bot.channels.get(serverStats.totalUsersID).setName(`Total Users : ${member.guild.memberCount}`);
   bot.channels.get(serverStats.memberCountID).setName(`Total Members: ${member.guild.members.filter(m => !m.user.bot).size}`);
   bot.channels.get(serverStats.botCountID).setName(`Bot Count : ${member.guild.members.filter(m => m.user.bot).size}`);
-     let channelsss= member.guild.channels.find(`name`, "general");
+     let channelsss= member.guild.channels.find(`name`, "join-leave-log");
   
   Money.findOneAndDelete({
     userID: member.id,
