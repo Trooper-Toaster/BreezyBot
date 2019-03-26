@@ -11,7 +11,8 @@ let banembed = new Discord.RichEmbed()
 .setDescription(`🔨**Banned** User: ${bUser} \n 📄**Reason**: ${breason}`)
 .setColor("#e09d0e")
   .setThumbnail(bUser.displayAvatarURL)
-
+  .setTimestamp()
+  .setFooter("Breezy Moderation Bot!", bot.user.displayAvatarURL)
 .asetAuthor(message.author.username);
 
 
