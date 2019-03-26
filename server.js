@@ -190,7 +190,7 @@ bot.on('messageDelete', message => {
 .addField("Message Content", message.content)
   .addField("Message Deleted By", message.author.username)
   .setTimestamp()
-  .setFooter("Breezy Moderation Bot!", bot.displayAvatarURL)
+  .setFooter("Breezy Moderation Bot!", bot.user.displayAvatarURL)
   .addField("In Channel", message.channel.name);
   
 message.guild.channels.find(`name`, "modlog").send(deleteEmbed);
