@@ -173,6 +173,7 @@ bot.on('guildMemberRemove', member => {
   bot.channels.get(serverStats.memberCountID).setName(`Total Members: ${member.guild.members.filter(m => !m.user.bot).size}`);
   bot.channels.get(serverStats.botCountID).setName(`Bot Count : ${member.guild.members.filter(m => m.user.bot).size}`);
      let channelsss= member.guild.channels.find(`name`, "join-leave-log");
+  channelsss.send(`${member} has left the server`);
   
   Money.findOneAndDelete({
     userID: member.id,
@@ -182,7 +183,7 @@ bot.on('guildMemberRemove', member => {
     console.log("Coins deleted!")
   });
    
-   channelsss.send(`${member} has left the server`);
+   
   
 });
 
