@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const Report = require("../models/what.js");
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://Troopers:fsxWOgZj94vaJiIk@hi-pn6gb.gcp.mongodb.net/HI?retryWrites=true&authSource=admin");
+mongoose.connect("mongodb+srv://idk:lol@hi-pn6gb.gcp.mongodb.net/test?retryWrites=true&w=majority");
 
 
 exports.run = (bot, message, args) => {
