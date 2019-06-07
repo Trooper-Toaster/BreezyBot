@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 const ms = require("ms");
 
-
-  let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!tomute) return message.reply("Couldn't find user.");
-  if(tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("Can't mute them!");
+module.exports.run = async (bot, message, args) => {
+  let mUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!mUser) return message.reply("Couldn't find user.");
+  if(mUser.hasPermission("MANAGE_MESSAGES")) return message.reply("Can't mute them!");
   let muterole = message.guild.roles.find(`name`, "muted");
 
 let reason = args[2]
@@ -13,7 +13,7 @@ if(!mutetime) return message.reply("You didn't specify a time!");
 await(mUser.addRole(muterole.id));
 
 let muteembed = new Discord.RichEmbed()
-.setDescription(`🔨**Muted** User: ${mUser} \n 📄**Reason**: ${reason}`)
+.setDescription(`🔨**Muted** User: ${mUser} \n 📄**Reason**: ${reason} \n ⏲**Time**: ${mutetime}`)
 .setColor("#e09d0e")
   .setThumbnail(mUser.displayAvatarURL)
   .setTimestamp()
@@ -34,7 +34,7 @@ setTimeout(function(){
   }, ms(mutetime));
 
 
-
+}
 module.exports.help = {
   
   name: "mute"
