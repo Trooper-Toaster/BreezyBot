@@ -32,7 +32,7 @@ mUser.sendMessage(`You have been muted for ${breason} you will be unmuted in ${m
 setTimeout(function(){
 mUser.removeRole(muteroles.id);
 message.channel.sendMessage("User Unmuted");
-}
+}, ms(mutetime));
 
 
 module.exports.help = {
