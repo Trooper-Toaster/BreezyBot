@@ -1,13 +1,12 @@
 const Discord = require("discord.js");
 const ms = require("ms");
 
-module.exports.run = async (bot, message, args) => {
- let mUser = message.guild.member(message.mentions.users.first() || message.guild.get(args[0]));
-if(!mUser) return message.channel.send("Cant Find user");
 
-if(!message.member.hasPermission("BAN_MEMBERS")) return message.send("Nice Try")
-if(mUser.hasPermission("BAN_MEMBERS")) return message.channel.send("Can't mute other Mods")
-let muterole = message.guild.roles.find(`name`, "muted");
+  let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!tomute) return message.reply("Couldn't find user.");
+  if(tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("Can't mute them!");
+  let muterole = message.guild.roles.find(`name`, "muted");
+
 let reason = args[2]
 let mutetime = args[1]
 if(!mutetime) return message.reply("You didn't specify a time!");
@@ -30,9 +29,10 @@ kickChannel.send(muteembed);
 mUser.sendMessage(`You have been muted for ${breason} you will be unmuted in ${mutetime}`);
 
 setTimeout(function(){
-mUser.removeRole(muteroles.id);
-message.channel.sendMessage("User Unmuted");
-}, ms(mutetime));
+    mUser.removeRole(muterole.id);
+    message.channel.send(`<@${mUser.id}> has been unmuted!`);
+  }, ms(mutetime));
+
 
 
 module.exports.help = {
