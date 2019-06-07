@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 const mon = require("mongoose");
-mon.connect("mongodb+srv://Troopers:fsxWOgZj94vaJiIk@hi-pn6gb.gcp.mongodb.net/HI?retryWrites=true&authSource=admin")
+mon.connect("mongodb+srv://Troopers:fsxWOgZj94vaJiIk@hi-pn6gb.gcp.mongodb.net/test?retryWrites=true&w=majority")
 const Money = require("../models/money.js");
 exports.run = (bot, message, args) => {
    Money.findOne({
