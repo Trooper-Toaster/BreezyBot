@@ -80,8 +80,8 @@ message.channel.send(warnEmbed);
 
   let warnchannel = message.guild.channels.find(`name`, "modlog");
   if(!warnchannel) return message.reply("Couldn't find channel");
-message.channel.send(warnEmbed);
-  warnchannel.send(warnEmbed);
+message.channel.send(kickembed);
+  warnchannel.send(kickembed);
   kicks[wUser.id].kicks++;
 
   fs.writeFile("./kicks.json", JSON.stringify(kicks), (err) => {
