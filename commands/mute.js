@@ -18,7 +18,7 @@ let muteembed = new Discord.RichEmbed()
   .setThumbnail(mUser.displayAvatarURL)
   .setTimestamp()
   .setFooter("Breezy Moderation Bot!", bot.user.displayAvatarURL)
-.asetAuthor(message.author.username);
+  .setAuthor(message.author.username);
 
 
 let kickChannel = message.guild.channels.find(`name`, "modlog")
