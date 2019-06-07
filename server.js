@@ -168,7 +168,7 @@ bot.on('guildMemberAdd', member => {
 
 
 bot.on('guildMemberRemove', member => {
-  member.sendMessage("Thanks for leaving the Breezy Discord!, also btw all of your coins are gone now!");
+  member.sendMessage("Thanks for leaving the Breezy Discord!");
   bot.channels.get(serverStats.totalUsersID).setName(`Total Users : ${member.guild.memberCount}`);
   bot.channels.get(serverStats.memberCountID).setName(`Total Members: ${member.guild.members.filter(m => !m.user.bot).size}`);
   bot.channels.get(serverStats.botCountID).setName(`Bot Count : ${member.guild.members.filter(m => m.user.bot).size}`);
@@ -185,7 +185,6 @@ bot.on('guildMemberRemove', member => {
    
    
   
-});
 
 bot.on('messageDelete', message => {
   
