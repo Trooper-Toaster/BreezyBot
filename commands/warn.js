@@ -27,7 +27,7 @@ if(wUser.hasPermission("KICK_MEMBERS")) return message.channel.send("Cant warn o
 
   let warnEmbed = new Discord.RichEmbed()
   .setDescription(`⚠**Warned** User: ${wUser} \n 📄**Reason**: ${reason} \n 📋**Warnings**: ${warns[wUser.id].warns}`)
-  .setAuthor(message.author.username)
+  .setAuthor(message.author.username, message.author.displayAvatarURL)
   .setColor("#fc6400")
   .setThumbnail(wUser.displayAvatarURL)
     .setTimestamp()
@@ -69,7 +69,7 @@ message.channel.send(warnEmbed);
   };
   let kickembed = new Discord.RichEmbed()
   .setDescription(`⚠**Kicked** User: ${wUser} \n 📄**Reason**: ${reason} \n 📋**Kicks**: ${kicks[wUser.id].kicks}`)
-  .setAuthor(message.author.username)
+  .setAuthor(message.author.username, message.author.displayAvatarURL)
   .setColor("#fc6400")
   .setThumbnail(wUser.displayAvatarURL)
     .setTimestamp()
