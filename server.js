@@ -184,7 +184,7 @@ bot.on('guildMemberRemove', member => {
   });
    
    
-  
+});
 
 bot.on('messageDelete', message => {
   
