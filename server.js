@@ -6,7 +6,7 @@ const invites = {};
 const wait = require('util').promisify(setTimeout);
 
 const Money = require("./models/money.js");
-mongoose.connect("mongodb+srv://Troopers:fsxWOgZj94vaJiIk:<password>@hi-pn6gb.gcp.mongodb.net/test?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://Troopers:fsxWOgZj94vaJiIk@hi-pn6gb.gcp.mongodb.net/test?retryWrites=true&w=majority");
 const fs = require("fs");
 const serverStats = {
   guildID: '534061084693495808',
