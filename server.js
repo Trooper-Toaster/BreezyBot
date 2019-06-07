@@ -175,13 +175,7 @@ bot.on('guildMemberRemove', member => {
      let channelsss= member.guild.channels.find(`name`, "join-leave-log");
   channelsss.send(`${member} has left the server`);
   
-  Money.findOneAndDelete({
-    userID: member.id,
-    serverID: member.guild.id
-  }, (err, res) => {
-    if(err) console.log(err)
-    console.log("Coins deleted!")
-  });
+  
    
    
 });
