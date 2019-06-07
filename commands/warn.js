@@ -67,7 +67,21 @@ message.channel.send(warnEmbed);
     kicks: 0
        
   };
+  let kickembed = new Discord.RichEmbed()
+  .setDescription(`⚠**Kicked** User: ${wUser} \n 📄**Reason**: ${reason} \n 📋**Kicks**: ${kicks[wUser.id].kicks}`)
+  .setAuthor(message.author.username)
+  .setColor("#fc6400")
+  .setThumbnail(wUser.displayAvatarURL)
+    .setTimestamp()
+  .setFooter("Breezy Moderation Bot!", bot.user.displayAvatarURL);
+ 
+  
+   
 
+  let warnchannel = message.guild.channels.find(`name`, "modlog");
+  if(!warnchannel) return message.reply("Couldn't find channel");
+message.channel.send(warnEmbed);
+  warnchannel.send(warnEmbed);
   kicks[wUser.id].kicks++;
 
   fs.writeFile("./kicks.json", JSON.stringify(kicks), (err) => {
