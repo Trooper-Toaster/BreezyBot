@@ -26,7 +26,7 @@ if(!kickChannel) return message.channel.send("Cant Find the ModLog")
 
 
 kickChannel.send(muteembed);
-mUser.sendMessage(`You have been muted for ${breason} you will be unmuted in ${mutetime}`);
+mUser.sendMessage(`You have been muted for ${reason} you will be unmuted in ${mutetime}`);
 
 setTimeout(function(){
     mUser.removeRole(muterole.id);
