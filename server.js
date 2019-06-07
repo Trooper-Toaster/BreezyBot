@@ -110,7 +110,7 @@ message.channel.send("is the best scripter")
     if (foundInText) {
       message.delete();
       message.channel.sendMessage('Hey!!');
-      message.channel.sendMessage(`/warn ${message.member} N-Word`);
+      message.channel.sendMessage(`/warn ${message.user.member} N-Word`);
   }
 
 
