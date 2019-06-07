@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const ms = require("ms");
 const mon = require("mongoose");
-mon.connect("mongodb+srv://Troopers:fsxWOgZj94vaJiIk@hi-pn6gb.gcp.mongodb.net/HI?retryWrites=true&authSource=admin")
+mon.connect("mongodb+srv://idk:lol@hi-pn6gb.gcp.mongodb.net/test?retryWrites=true&w=majority")
 const Warn = require("../models/warn.js");
 let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 let kicks = JSON.parse(fs.readFileSync("./kicks.json", "utf8"));
